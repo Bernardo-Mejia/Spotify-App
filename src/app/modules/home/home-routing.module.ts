@@ -6,14 +6,6 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 // import { SideBarComponent } from '../../shared/components/side-bar/side-bar.component';
 
 const routes: Routes = [
-  // {
-  //   path: "",
-  //   component: HomePageComponent
-  // },
-  // {
-  //   path: "**",
-  //   redirectTo: ""
-  // }
   {
     path: "tracks",
     loadChildren: () => import("@modules/tracks/tracks.module").then(m => m.TracksModule),
@@ -25,6 +17,10 @@ const routes: Routes = [
   {
     path: "history",
     loadChildren: () => import("@modules/history/history.module").then(m => m.HistoryModule),
+  },
+  {
+    path: '**',//TODO 404 cuando no existe la ruta
+    redirectTo: '/tracks'
   }
 ];
 

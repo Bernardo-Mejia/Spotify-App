@@ -4,7 +4,7 @@ import { TracksPageComponent } from './pages/tracks-page/tracks-page.component';
 
 const routes: Routes = [
   {
-    path:"",
+    path:'',
     component:TracksPageComponent,
     // El outlet es para indicarle qué routerOutlet cargará con ese nombre
     // outlet:"child"
